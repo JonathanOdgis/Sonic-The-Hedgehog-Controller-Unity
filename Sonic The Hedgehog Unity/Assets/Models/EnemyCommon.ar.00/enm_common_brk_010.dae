@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+    <asset>
+        <contributor>
+            <authoring_tool>SonicGLvl - COLLADA Exporter</authoring_tool>
+        </contributor>
+        <unit name="meters" meter="1.0" />
+        <up_axis>Y_UP</up_axis>
+    </asset>
+    <library_images>
+        <image id="enm_cmn_pieces_dif_HD-image" name="enm_cmn_pieces_dif_HD-image">
+            <init_from>./textures/enm_cmn_pieces_dif_HD.png</init_from>
+        </image>
+        <image id="enm_cmn_pieces_spc_HD-image" name="enm_cmn_pieces_spc_HD-image">
+            <init_from>./textures/enm_cmn_pieces_spc_HD.png</init_from>
+        </image>
+        <image id="enm_cmn_pieces_nrm_HD-image" name="enm_cmn_pieces_nrm_HD-image">
+            <init_from>./textures/enm_cmn_pieces_nrm_HD.png</init_from>
+        </image>
+        <image id="enm_cmn_pieces_ref_HD-image" name="enm_cmn_pieces_ref_HD-image">
+            <init_from>./textures/enm_cmn_pieces_ref_HD.png</init_from>
+        </image>
+        <image id="enm_cmn_pieces_fal_HD-image" name="enm_cmn_pieces_fal_HD-image">
+            <init_from>./textures/enm_cmn_pieces_fal_HD.png</init_from>
+        </image>
+    </library_images>
+    <library_materials>
+        <material id="enm_common_piecesID" name="enm_common_pieces">
+            <instance_effect url="#enm_common_pieces-effect" />
+        </material>
+    </library_materials>
+    <library_effects>
+        <effect id="enm_common_pieces-effect" name="enm_common_pieces-effect">
+            <profile_COMMON>
+                <newparam sid="enm_cmn_pieces_dif_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_cmn_pieces_dif_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_dif_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_cmn_pieces_dif_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_spc_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_cmn_pieces_spc_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_spc_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_cmn_pieces_spc_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_nrm_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_cmn_pieces_nrm_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_nrm_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_cmn_pieces_nrm_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_ref_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_cmn_pieces_ref_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_ref_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_cmn_pieces_ref_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_fal_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_cmn_pieces_fal_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_cmn_pieces_fal_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_cmn_pieces_fal_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <technique sid="COMMON">
+                    <phong>
+                        <diffuse>
+                            <texture texture="enm_cmn_pieces_dif_HD-image-sampler" texcoord="UVSET0" />
+                            <color>1.000000 1.000000 1.000000 1</color>
+                        </diffuse>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+    </library_effects>
+    <library_geometries>
+        <geometry id="enm_common_brk_010-geometry" name="enm_common_brk_010-geometry">
+            <mesh>
+                <source id="enm_common_brk_010-geometry-position">
+                    <float_array id="enm_common_brk_010-geometry-position-array" count="183">-0.0312393 -0.0309184 0.0460277 0.0326847 -0.0198793 -0.0339461 -0.0303798 -0.0403906 -0.0339461 0.0293355 -0.0259563 0.0460277 -0.039018 0.0360756 0.0357844 0.0327633 0.0355933 -0.0339461 0.0313783 0.0273382 0.0357844 -0.039018 0.0363818 -0.0339461 -0.0312393 -0.0309184 0.0460277 0.0293355 -0.0259563 0.0460277 0.0327633 0.0355933 -0.0339461 0.0326847 -0.0198793 -0.0339461 -0.039018 0.0363818 -0.0339461 -0.0303798 -0.0403906 -0.0339461 -0.0303798 -0.0403906 -0.0339461 -0.039018 0.0363818 -0.0339461 -0.0251127 0.0029468 -0.00358197 -0.0598618 -0.0068957 -6.5024e-006 -0.0280387 -0.0045621 -0.0082348 -0.0569359 0.0006132 0.00464626 -0.0280387 -0.0045621 -0.0082348 -0.0598618 -0.0068957 0.00929909 -0.0280387 -0.0045621 0.00107079 -0.0598618 -0.0068957 -6.5024e-006 -0.101407 0.0105861 -0.0082348 -0.0984805 0.018095 -0.00358197 -0.101407 0.0105861 0.00107079 -0.101407 0.0105861 -0.0082348 -0.0984805 0.018095 -0.00358197 -0.101407 0.0105861 0.00107079 -0.101407 0.0105861 -0.0082348 0.0296787 -0.0055733 0.00685865 0.064053 0.0138335 -0.0191945 0.0283517 0.0023756 0.00220589 0.06538 0.0058846 -0.0145417 0.0283517 0.0023756 0.00220589 0.064053 0.0138335 -0.00988897 0.0283517 0.0023756 0.0115114 0.064053 0.0138335 -0.0191945 0.0860654 0.0246548 0.00220589 0.0873923 0.016706 0.00685865 0.0860654 0.0246548 0.0115114 0.0860654 0.0246548 0.00220589 0.0873923 0.016706 0.00685865 0.0860654 0.0246548 0.0115114 0.0860654 0.0246548 0.00220589 -0.0103475 -0.0192443 0.0116301 0.0127361 -0.0709267 -0.00504146 -0.0076901 -0.0195465 0.00271715 0.0100787 -0.0706244 0.00387142 -0.0076901 -0.0195465 0.00271715 0.0176817 -0.0660157 0.00112426 -0.0027444 -0.0146356 0.00888287 0.0127361 -0.0709267 -0.00504146 0.0417261 -0.076692 0.00859538 0.0390687 -0.0763897 0.0175083 0.0466717 -0.071781 0.0147611 0.0417261 -0.076692 0.00859538 0.0390687 -0.0763897 0.0175083 0.0466717 -0.071781 0.0147611 0.0417261 -0.076692 0.00859538 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_common_brk_010-geometry-position-array" count="61" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_common_brk_010-geometry-normal">
+                    <float_array id="enm_common_brk_010-geometry-normal-array" count="105">-0.395715 -0.448302 0.80152 0.541557 -0.404097 -0.737172 -0.371076 -0.606634 -0.703063 0.44901 -0.389094 0.80436 -0.517533 0.531331 0.670706 0.496884 0.486058 -0.718925 0.546547 0.489169 0.679706 -0.509306 0.461214 -0.726559 -0.118486 0.97625 -0.181376 -0.0707695 -0.439426 -0.895487 -0.249029 -0.0183183 -0.968323 0.166685 0.945983 0.278089 -0.0295073 -0.304565 0.952035 0.259477 -0.240549 0.935312 -0.392093 -0.0901764 -0.915495 -0.2061 0.965567 -0.158752 -0.573977 -0.0821556 0.81474 0.484626 -0.783459 0.389011 0.0128145 0.210191 -0.977576 -0.559264 0.297129 -0.773911 0.330415 -0.820848 -0.465871 -0.371812 0.472718 0.798933 0.441753 0.23875 0.864785 0.515627 0.675908 -0.526572 0.51548 -0.671486 0.532341 0.104761 0.261692 0.959449 -0.203028 -0.22463 0.953059 -0.0802555 -0.289749 -0.953732 -0.153392 0.0876477 -0.984271 -0.488655 -0.459475 0.741687 0.632226 0.772863 -0.054536 0.818804 0.247283 0.518085 0.500521 -0.426889 -0.753156 -0.0328104 -0.224446 0.973934 0.796582 0.305229 0.521816 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_common_brk_010-geometry-normal-array" count="35" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_common_brk_010-geometry-uv">
+                    <float_array id="enm_common_brk_010-geometry-uv-array" count="58">1.54189 0.794931 1.70671 0.607396 1.54122 0.607395 1.70682 0.794932 1.70671 0.41986 1.54189 0.232323 1.54122 0.419859 1.70682 0.232324 1.37542 0.420162 1.37542 0.607089 1.21097 0.420161 1.21097 0.607088 1.87143 0.607093 1.87143 0.420166 0.621443 0.330172 0.865208 0.549701 0.865208 0.330172 0.621443 0.549701 0.133913 0.330172 0.377678 0.549701 0.377678 0.330172 0.133913 0.549701 0.865208 0.769229 0.621443 0.769229 0.377678 0.769229 0.133913 0.769229 0.693508 0.431679 0.708794 0.412558 0.678221 0.412558 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_common_brk_010-geometry-uv-array" count="29" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="enm_common_brk_010-geometry-vertex">
+                    <input semantic="POSITION" source="#enm_common_brk_010-geometry-position" />
+                </vertices>
+                <triangles material="enm_common_pieces" count="61">
+                    <input semantic="VERTEX" source="#enm_common_brk_010-geometry-vertex" offset="0" />
+                    <input semantic="NORMAL" source="#enm_common_brk_010-geometry-normal" offset="1" />
+                    <input semantic="TEXCOORD" source="#enm_common_brk_010-geometry-uv" offset="2" set="0" />
+                    <p>30 14 28 29 16 27 28 15 26 45 23 28 44 25 27 43 24 26 60 32 28 59 34 27 58 33 26 1 1 1 0 0 0 2 2 2 0 0 0 1 1 1 3 3 3 4 4 4 5 5 5 7 7 7 5 5 5 4 4 4 6 6 6 8 0 1 6 6 6 4 4 4 6 6 6 8 0 1 6 6 6 9 3 2 6 6 6 8 0 1 6 6 6 9 3 2 10 5 8 11 1 9 10 5 8 9 3 2 10 5 8 11 1 9 12 7 10 13 2 11 12 7 10 11 1 9 4 4 4 14 2 12 8 0 1 14 2 12 4 4 4 15 7 13 17 9 15 16 8 14 18 10 16 16 8 14 17 9 15 16 8 14 19 11 17 16 8 14 17 9 15 16 8 14 19 11 17 22 13 20 21 12 19 22 13 20 19 11 17 22 13 20 21 12 19 20 10 18 21 12 19 20 10 18 21 12 19 20 10 18 21 12 19 23 9 21 26 16 24 23 9 21 21 12 19 23 9 21 26 16 24 27 14 25 21 12 19 25 15 23 26 16 24 25 15 23 21 12 19 25 15 23 19 11 17 25 15 23 21 12 19 25 15 23 19 11 17 24 14 22 17 9 15 24 14 22 19 11 17 32 18 15 31 17 14 33 19 16 31 17 14 32 18 15 31 17 14 34 20 17 31 17 14 32 18 15 31 17 14 34 20 17 37 22 20 36 21 19 37 22 20 34 20 17 37 22 20 36 21 19 35 19 18 36 21 19 35 19 18 36 21 19 35 19 18 36 21 19 38 18 21 41 25 24 38 18 21 36 21 19 38 18 21 41 25 24 42 23 25 36 21 19 40 24 23 41 25 24 40 24 23 36 21 19 40 24 23 34 20 17 40 24 23 36 21 19 40 24 23 34 20 17 39 23 22 32 18 15 39 23 22 34 20 17 47 27 15 46 26 14 48 28 16 46 26 14 47 27 15 46 26 14 49 29 17 46 26 14 47 27 15 46 26 14 49 29 17 52 31 20 51 30 19 52 31 20 49 29 17 52 31 20 51 30 19 50 28 18 51 30 19 50 28 18 51 30 19 50 28 18 51 30 19 53 27 21 56 34 24 53 27 21 51 30 19 53 27 21 56 34 24 57 32 25 51 30 19 55 33 23 56 34 24 55 33 23 51 30 19 55 33 23 49 29 17 55 33 23 51 30 19 55 33 23 49 29 17 54 32 22 47 27 15 54 32 22 49 29 17 </p>
+                </triangles>
+            </mesh>
+        </geometry>
+    </library_geometries>
+    <library_controllers>
+        <controller id="enm_common_brk_010-controller">
+            <skin source="#enm_common_brk_010-geometry">
+                <bind_shape_matrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</bind_shape_matrix>
+                <source id="enm_common_brk_010-controller-Joints">
+                    <Name_array id="enm_common_brk_010-controller-Joints-array" count="1">enm_common_brk_010 </Name_array>
+                    <technique_common>
+                        <accessor source="#enm_common_brk_010-controller-Joints-array" count="1">
+                            <param type="name" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_common_brk_010-controller-Matrices">
+                    <float_array id="enm_common_brk_010-controller-Matrices-array" count="16">1 -0 0 -0 -0 1 -0 0 0 -0 0.656808 -0 -0 0 -0 1 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_common_brk_010-controller-Matrices-array" count="1" stride="16">
+                            <param type="float4x4" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_common_brk_010-controller-Weights">
+                    <float_array id="enm_common_brk_010-controller-Weights-array" count="1">1 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_common_brk_010-controller-Weights-array" count="1">
+                            <param type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <joints>
+                    <input semantic="JOINT" source="#enm_common_brk_010-controller-Joints" />
+                    <input semantic="INV_BIND_MATRIX" source="#enm_common_brk_010-controller-Matrices" />
+                </joints>
+                <vertex_weights count="61">
+                    <input semantic="JOINT" offset="0" source="#enm_common_brk_010-controller-Joints" />
+                    <input semantic="WEIGHT" offset="1" source="#enm_common_brk_010-controller-Weights" />
+                    <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+                    <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+                </vertex_weights>
+            </skin>
+        </controller>
+    </library_controllers>
+    <library_visual_scenes>
+        <visual_scene id="SonicGLvlScene" name="SonicGLvlScene">
+            <node id="enm_common_brk_010" sid="enm_common_brk_010" name="enm_common_brk_010">
+                <instance_controller url="#enm_common_brk_010-controller">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="enm_common_pieces" target="#enm_common_piecesID" />
+                        </technique_common>
+                    </bind_material>
+                </instance_controller>
+            </node>
+            <node id="enm_common_brk_010" sid="enm_common_brk_010" name="enm_common_brk_010" type="JOINT">
+                <matrix>1 0 0 -0 0 1 0 -0 0 0 1.52251 -0 0 0 0 1 </matrix>
+                <extra>
+                    <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                    </technique>
+                </extra>
+            </node>
+        </visual_scene>
+    </library_visual_scenes>
+    <scene>
+        <instance_visual_scene url="#SonicGLvlScene" />
+    </scene>
+</COLLADA>

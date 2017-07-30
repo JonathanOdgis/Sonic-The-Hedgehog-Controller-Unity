@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+    <asset>
+        <contributor>
+            <authoring_tool>SonicGLvl - COLLADA Exporter</authoring_tool>
+        </contributor>
+        <unit name="meters" meter="1.0" />
+        <up_axis>Y_UP</up_axis>
+    </asset>
+    <library_images>
+        <image id="enm_beetle_body_dif_HD-image" name="enm_beetle_body_dif_HD-image">
+            <init_from>./textures/enm_beetle_body_dif_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_spc_HD-image" name="enm_beetle_body_spc_HD-image">
+            <init_from>./textures/enm_beetle_body_spc_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_nrm_HD-image" name="enm_beetle_body_nrm_HD-image">
+            <init_from>./textures/enm_beetle_body_nrm_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_env_HD-image" name="enm_beetle_body_env_HD-image">
+            <init_from>./textures/enm_beetle_body_env_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_fal_HD-image" name="enm_beetle_body_fal_HD-image">
+            <init_from>./textures/enm_beetle_body_fal_HD.png</init_from>
+        </image>
+    </library_images>
+    <library_materials>
+        <material id="enm_beetle_bodyID" name="enm_beetle_body">
+            <instance_effect url="#enm_beetle_body-effect" />
+        </material>
+    </library_materials>
+    <library_effects>
+        <effect id="enm_beetle_body-effect" name="enm_beetle_body-effect">
+            <profile_COMMON>
+                <newparam sid="enm_beetle_body_dif_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_dif_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_dif_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_dif_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_spc_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_spc_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_spc_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_spc_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_nrm_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_nrm_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_nrm_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_nrm_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_env_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_env_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_env_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_env_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_fal_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_fal_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_fal_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_fal_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <technique sid="COMMON">
+                    <phong>
+                        <diffuse>
+                            <texture texture="enm_beetle_body_dif_HD-image-sampler" texcoord="UVSET0" />
+                            <color>1.000000 1.000000 1.000000 1</color>
+                        </diffuse>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+    </library_effects>
+    <library_geometries>
+        <geometry id="enm_beetle_brk_004-geometry" name="enm_beetle_brk_004-geometry">
+            <mesh>
+                <source id="enm_beetle_brk_004-geometry-position">
+                    <float_array id="enm_beetle_brk_004-geometry-position-array" count="84">-0.188742 0.0141507 -0.157342 0.002002 0.0249112 0.208323 -0.182318 0.0015004 -0.161005 -0.000936 0.0339648 0.209193 0.045407 -0.0050646 -0.20836 0.0820629 0.011355 0.20702 -0.000936 0.0339648 0.209193 0.0820629 0.011355 0.20702 0.045789 -0.0138027 -0.209193 0.002002 0.0249112 0.208323 0.188742 -0.0339648 -0.189597 -0.101641 0.0123167 -0.192051 -0.0982384 -0.0001613 -0.194299 0.188742 -0.0339648 -0.189597 -0.188742 0.0141507 -0.157342 -0.182318 0.0015004 -0.161005 -0.0982384 -0.0001613 -0.194299 0.045407 -0.0050646 -0.20836 -0.101641 0.0123167 -0.192051 0.045789 -0.0138027 -0.209193 -0.101641 0.0123167 -0.192051 -0.182318 0.0015004 -0.161005 -0.0982384 -0.0001613 -0.194299 -0.182318 0.0015004 -0.161005 -0.188742 0.0141507 -0.157342 0.045407 -0.0050646 -0.20836 0.045789 -0.0138027 -0.209193 0.188742 -0.0339648 -0.189597 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_004-geometry-position-array" count="28" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_004-geometry-normal">
+                    <float_array id="enm_beetle_brk_004-geometry-normal-array" count="69">-0.760665 -0.502001 0.411562 -0.83636 -0.31919 0.445667 -0.759324 -0.504538 0.410937 -0.837729 -0.314754 0.446251 0.164329 0.984051 -0.068117 0.250206 0.966314 -0.060277 0.204763 0.976714 -0.064046 -0.162251 -0.984 0.073618 -0.120536 -0.98967 0.077623 -0.133122 -0.988319 0.074189 0.204456 0.977234 -0.056672 0.054086 0.996264 -0.067325 -0.040535 -0.99657 0.072151 -0.14904 -0.986163 0.072597 -0.000403 0.998553 -0.053773 0.004448 -0.998125 0.061049 -0.200587 0.119295 -0.972386 -0.093832 0.093484 -0.991189 -0.263807 0.101584 -0.959211 -0.09396 0.090487 -0.991455 -0.367374 0.080664 -0.926569 -0.367459 0.081631 -0.92645 0.149009 0.100371 -0.983729 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_004-geometry-normal-array" count="23" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_004-geometry-uv">
+                    <float_array id="enm_beetle_brk_004-geometry-uv-array" count="28">0.524428 0.883051 0.412284 0.829875 0.519687 0.889275 0.414001 0.825776 0.539799 0.811643 0.414656 0.800464 0.737043 0.773036 0.611452 0.761884 0.737436 0.748424 0.534146 0.76793 0.534885 0.856488 0.615947 0.717608 0.617365 0.805829 0.625993 0.691761 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_004-geometry-uv-array" count="14" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="enm_beetle_brk_004-geometry-vertex">
+                    <input semantic="POSITION" source="#enm_beetle_brk_004-geometry-position" />
+                </vertices>
+                <triangles material="enm_beetle_body" count="16">
+                    <input semantic="VERTEX" source="#enm_beetle_brk_004-geometry-vertex" offset="0" />
+                    <input semantic="NORMAL" source="#enm_beetle_brk_004-geometry-normal" offset="1" />
+                    <input semantic="TEXCOORD" source="#enm_beetle_brk_004-geometry-uv" offset="2" set="0" />
+                    <p>22 16 6 21 20 0 20 18 8 24 21 2 18 18 8 23 20 0 27 22 9 26 22 7 25 22 4 1 1 1 0 0 0 2 2 2 0 0 0 1 1 1 3 3 3 4 4 4 5 5 5 10 10 9 5 5 5 4 4 4 6 6 3 11 11 10 6 6 3 4 4 4 6 6 3 11 11 10 14 14 0 7 7 6 8 8 7 13 13 12 8 8 7 7 7 6 8 8 7 9 9 8 8 8 7 7 7 6 8 8 7 9 9 8 12 12 11 15 15 13 12 12 11 9 9 8 17 17 9 16 16 6 18 18 8 16 16 6 17 17 9 19 19 10 </p>
+                </triangles>
+            </mesh>
+        </geometry>
+    </library_geometries>
+    <library_controllers>
+        <controller id="enm_beetle_brk_004-controller">
+            <skin source="#enm_beetle_brk_004-geometry">
+                <bind_shape_matrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</bind_shape_matrix>
+                <source id="enm_beetle_brk_004-controller-Joints">
+                    <Name_array id="enm_beetle_brk_004-controller-Joints-array" count="1">enm_beetle_brk_004 </Name_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_004-controller-Joints-array" count="1">
+                            <param type="name" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_004-controller-Matrices">
+                    <float_array id="enm_beetle_brk_004-controller-Matrices-array" count="16">1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_004-controller-Matrices-array" count="1" stride="16">
+                            <param type="float4x4" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_004-controller-Weights">
+                    <float_array id="enm_beetle_brk_004-controller-Weights-array" count="1">1 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_004-controller-Weights-array" count="1">
+                            <param type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <joints>
+                    <input semantic="JOINT" source="#enm_beetle_brk_004-controller-Joints" />
+                    <input semantic="INV_BIND_MATRIX" source="#enm_beetle_brk_004-controller-Matrices" />
+                </joints>
+                <vertex_weights count="28">
+                    <input semantic="JOINT" offset="0" source="#enm_beetle_brk_004-controller-Joints" />
+                    <input semantic="WEIGHT" offset="1" source="#enm_beetle_brk_004-controller-Weights" />
+                    <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+                    <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+                </vertex_weights>
+            </skin>
+        </controller>
+    </library_controllers>
+    <library_visual_scenes>
+        <visual_scene id="SonicGLvlScene" name="SonicGLvlScene">
+            <node id="enm_beetle_brk_004" sid="enm_beetle_brk_004" name="enm_beetle_brk_004">
+                <instance_controller url="#enm_beetle_brk_004-controller">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="enm_beetle_body" target="#enm_beetle_bodyID" />
+                        </technique_common>
+                    </bind_material>
+                </instance_controller>
+            </node>
+            <node id="enm_beetle_brk_004" sid="enm_beetle_brk_004" name="enm_beetle_brk_004" type="JOINT">
+                <matrix>1 0 0 -0 0 1 0 -0 0 0 1 -0 0 0 0 1 </matrix>
+                <extra>
+                    <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                    </technique>
+                </extra>
+            </node>
+        </visual_scene>
+    </library_visual_scenes>
+    <scene>
+        <instance_visual_scene url="#SonicGLvlScene" />
+    </scene>
+</COLLADA>

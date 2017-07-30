@@ -1,0 +1,47 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 18.10.2010 17:20:48
+
+newmtl Standardmaterial3
+	Ns 10.0830
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka cmn_save01_dfsp_r_alpha.png
+	map_Kd cmn_save01_dfsp_r.png
+	map_Ks cmn_save01_dfsp_r_alpha.png
+
+newmtl Standardmaterial1
+	Ns 10.0830
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka cmn_save03_dflu_r_alpha.png
+	map_Kd cmn_save03_dflu_r.png
+	map_Ks cmn_save03_dflu_r_alpha.png
+
+newmtl Standardmaterial2
+	Ns 10.0830
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka cmn_save02_dflu_r_alpha.png
+	map_Kd cmn_save02_dflu_r.png
+	map_Ks cmn_save02_dflu_r_alpha.png

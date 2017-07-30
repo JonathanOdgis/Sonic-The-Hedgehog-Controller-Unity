@@ -1,0 +1,72 @@
+newmtl LANDTX31_material_0
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill128_1.png
+newmtl LANDTX31_material_1
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill128_2.png
+newmtl LANDTX31_material_2
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill128_3.png
+newmtl LANDTX31_material_3
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill128_4.png
+newmtl LANDTX31_material_4
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill128_7.png
+newmtl LANDTX31_material_5
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill64_1.png
+newmtl LANDTX31_material_6
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill64_3.png
+newmtl LANDTX31_material_7
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill64_4.png
+newmtl LANDTX31_material_8
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill64_5.png
+newmtl LANDTX31_material_9
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill64_7.png
+newmtl LANDTX31_material_10
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd hasi.png
+newmtl LANDTX31_material_11
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+illum 1
+map_Kd greenhill128_6.png

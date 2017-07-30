@@ -1,0 +1,7 @@
+
+» If textures are missing, please go to:
+» http://www.textures-resource.com/pc_computer/sonicgenerations/texture/4524/
+
+» Credit goes to: DatHax 
+
+» Tools: SonicGLvl (v0.5.7)

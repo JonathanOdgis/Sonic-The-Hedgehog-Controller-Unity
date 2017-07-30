@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+    <asset>
+        <contributor>
+            <authoring_tool>SonicGLvl - COLLADA Exporter</authoring_tool>
+        </contributor>
+        <unit name="meters" meter="1.0" />
+        <up_axis>Y_UP</up_axis>
+    </asset>
+    <library_images>
+        <image id="enm_beetle_body_dif_HD-image" name="enm_beetle_body_dif_HD-image">
+            <init_from>./textures/enm_beetle_body_dif_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_spc_HD-image" name="enm_beetle_body_spc_HD-image">
+            <init_from>./textures/enm_beetle_body_spc_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_nrm_HD-image" name="enm_beetle_body_nrm_HD-image">
+            <init_from>./textures/enm_beetle_body_nrm_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_env_HD-image" name="enm_beetle_body_env_HD-image">
+            <init_from>./textures/enm_beetle_body_env_HD.png</init_from>
+        </image>
+        <image id="enm_beetle_body_fal_HD-image" name="enm_beetle_body_fal_HD-image">
+            <init_from>./textures/enm_beetle_body_fal_HD.png</init_from>
+        </image>
+    </library_images>
+    <library_materials>
+        <material id="enm_beetle_bodyID" name="enm_beetle_body">
+            <instance_effect url="#enm_beetle_body-effect" />
+        </material>
+    </library_materials>
+    <library_effects>
+        <effect id="enm_beetle_body-effect" name="enm_beetle_body-effect">
+            <profile_COMMON>
+                <newparam sid="enm_beetle_body_dif_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_dif_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_dif_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_dif_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_spc_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_spc_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_spc_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_spc_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_nrm_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_nrm_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_nrm_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_nrm_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_env_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_env_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_env_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_env_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <newparam sid="enm_beetle_body_fal_HD-image-surface">
+                    <surface type="2D">
+                        <init_from>enm_beetle_body_fal_HD-image</init_from>
+                    </surface>
+                </newparam>
+                <newparam sid="enm_beetle_body_fal_HD-image-sampler">
+                    <sampler2D>
+                        <source>enm_beetle_body_fal_HD-image-surface</source>
+                    </sampler2D>
+                </newparam>
+                <technique sid="COMMON">
+                    <phong>
+                        <diffuse>
+                            <texture texture="enm_beetle_body_dif_HD-image-sampler" texcoord="UVSET0" />
+                            <color>1.000000 1.000000 1.000000 1</color>
+                        </diffuse>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+    </library_effects>
+    <library_geometries>
+        <geometry id="enm_beetle_brk_003-geometry" name="enm_beetle_brk_003-geometry">
+            <mesh>
+                <source id="enm_beetle_brk_003-geometry-position">
+                    <float_array id="enm_beetle_brk_003-geometry-position-array" count="381">0.0830102 0.129451 -0.129138 0.0648072 -0.127469 0.188039 0.0830101 0.12945 0.188039 0.0648072 -0.127469 -0.129736 -0.008883 0.1467 -0.133839 0.0516492 0.14374 0.193785 -0.008883 0.1467 0.19953 0.0516493 0.143741 -0.131489 0.0036593 0.124126 0.173779 0.0555527 0.121505 0.169686 0.0627259 0.116228 0.168321 0.0483796 0.12387 0.17105 -0.0322721 -0.1467 -0.0917595 0.029732 -0.142755 0.193784 0.0297319 -0.142755 -0.110748 -0.0322721 -0.1467 0.19953 0.0648072 -0.127469 -0.129736 -0.021527 0.12945 -0.19953 -0.0312734 -0.127469 -0.198909 0.0830102 0.129451 -0.129138 -0.0351133 0.14374 -0.184037 -0.0486996 0.1467 -0.168544 -0.0533077 -0.142755 -0.169384 -0.0830102 -0.1467 -0.139859 -0.008883 0.1467 0.19953 -0.0202464 -0.131108 0.197481 -0.0322721 -0.1467 0.19953 0.0005352 0.131872 0.197521 0.029732 -0.142755 0.193784 0.030819 -0.129977 0.19378 0.0648072 -0.127469 0.188039 0.0706454 0.120857 0.190052 0.0830101 0.12945 0.188039 0.0538026 -0.118515 0.190078 0.0516492 0.14374 0.193785 0.0506275 0.131547 0.193786 0.0005352 0.131872 0.197521 -0.0158187 -0.123644 0.173719 -0.0202464 -0.131108 0.197481 0.0036593 0.124126 0.173779 0.030819 -0.129977 0.19378 -0.0158187 -0.123644 0.173719 0.0296254 -0.123015 0.17104 -0.0202464 -0.131108 0.197481 0.0538026 -0.118515 0.190078 0.0627259 0.116228 0.168321 0.0706454 0.120857 0.190052 0.0465631 -0.114369 0.168361 0.0706454 0.120857 0.190052 0.0627259 0.116228 0.168321 0.0555527 0.121505 0.169686 0.0830102 0.129451 -0.129138 0.0830101 0.12945 0.188039 0.0648072 -0.127469 0.188039 0.0648072 -0.127469 -0.129736 -0.021527 0.12945 -0.19953 -0.0312734 -0.127469 -0.198909 0.0380943 -0.120307 0.1697 0.0506275 0.131547 0.193786 0.0036593 0.124126 0.173779 0.0005352 0.131872 0.197521 0.0483796 0.12387 0.17105 -0.0158187 -0.123644 0.173719 0.0465631 -0.114369 0.168361 0.0380943 -0.120307 0.1697 0.0296254 -0.123015 0.17104 0.0538026 -0.118515 0.190078 0.0465631 -0.114369 0.168361 -0.0322721 -0.1467 -0.0917595 -0.008883 0.1467 0.19953 -0.0322721 -0.1467 0.19953 -0.008883 0.1467 -0.133839 -0.0322721 -0.1467 -0.0917595 -0.0486996 0.1467 -0.168544 -0.008883 0.1467 -0.133839 -0.0830102 -0.1467 -0.139859 -0.0533077 -0.142755 -0.169384 -0.0486996 0.1467 -0.168544 -0.0830102 -0.1467 -0.139859 -0.0351133 0.14374 -0.184037 -0.0312734 -0.127469 -0.198909 -0.0351133 0.14374 -0.184037 -0.0533077 -0.142755 -0.169384 -0.021527 0.12945 -0.19953 0.0336393 0.0829833 -0.105698 -0.177531 -0.114913 -0.177247 0.0489361 -0.0375971 -0.101915 -0.192828 0.0056679 -0.18103 0.0229913 -0.0401711 -0.0790934 -0.205614 0.0050575 -0.148832 0.0076945 0.0804093 -0.0828763 -0.190317 -0.115523 -0.145049 0.0489361 -0.0375971 -0.101915 -0.190317 -0.115523 -0.145049 0.0229913 -0.0401711 -0.0790934 -0.177531 -0.114913 -0.177247 -0.192828 0.0056679 -0.18103 0.0076945 0.0804093 -0.0828763 -0.205614 0.0050575 -0.148832 0.0336393 0.0829833 -0.105698 -0.428184 0.0490185 -0.139642 -0.423368 -0.071239 -0.100871 -0.435399 -0.0722098 -0.13335 -0.416153 0.0499891 -0.107163 -0.435399 -0.0722098 -0.13335 -0.428184 0.0490185 -0.139642 -0.416153 0.0499891 -0.107163 -0.423368 -0.071239 -0.100871 -0.423368 -0.071239 -0.100871 -0.435399 -0.0722098 -0.13335 -0.428184 0.0490185 -0.139642 -0.416153 0.0499891 -0.107163 -0.0107995 0.0624284 0.0235919 -0.149725 0.108487 -0.0402292 0.0027076 0.0760777 0.029024 -0.163232 0.094838 -0.0456612 0.0027076 0.0760777 0.029024 -0.151 0.10275 -0.0593005 0.0014327 0.0703404 0.0099527 -0.149725 0.108487 -0.0402292 -0.266651 0.168469 0.0425756 -0.280158 0.154819 0.0371436 -0.267926 0.162731 0.0235043 -0.266651 0.168469 0.0425756 -0.280158 0.154819 0.0371436 -0.267926 0.162731 0.0235043 -0.266651 0.168469 0.0425756 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_003-geometry-position-array" count="127" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_003-geometry-normal">
+                    <float_array id="enm_beetle_brk_003-geometry-normal-array" count="339">0.997499 -0.070674 0 0.054724 0.996987 -0.05497 0.220177 0.97546 1e-006 0.048831 0.998807 0 0.28674 0.925146 -0.248769 0.089095 -0.025721 0.995691 0.068222 -0.181377 0.981044 0.085644 -0.043146 0.995391 0.05448 -0.369827 0.927502 0.056188 -0.997847 -0.033823 0.221681 -0.975119 -1e-006 0.227989 -0.967026 -0.113499 0.063489 -0.997983 -1e-006 0.576751 -0.027984 -0.816441 0.565291 -0.033941 -0.824193 0.584109 -0.02412 -0.811317 0.558147 -0.037617 -0.828889 0.183802 0.940688 -0.285171 0.093405 0.989844 -0.107166 0.135458 -0.973492 -0.184294 0.06454 -0.99559 -0.068078 0.129695 -0.051797 0.9902 0.139959 0.017943 0.989995 0.128698 0.031018 0.991199 0.141257 -0.040164 0.989158 0.11091 -0.001768 0.993829 0.128765 -0.011051 0.991614 0.170008 -0.014614 0.985334 0.170885 -0.014335 0.985187 0.170737 -0.014887 0.985204 0.170387 -0.01503 0.985263 0.120721 -0.01745 0.992533 0.12979 -0.010719 0.991484 0.984844 -0.077488 0.155172 0.98425 -0.077784 0.158751 0.984216 -0.077801 0.158954 0.984893 -0.077464 0.15487 -0.169108 0.945293 0.278968 0.001507 0.954609 0.297858 -0.130541 0.946064 0.296516 0.000593 0.954005 0.299791 -0.942691 0.066147 0.327044 -0.941988 0.066304 0.329033 -0.941944 0.066314 0.329156 -0.942747 0.066134 0.326887 -0.436063 -0.849806 0.296105 -0.509927 -0.784488 0.352922 -0.392021 -0.859871 0.327018 0.419163 0.892468 -0.166743 0.414647 0.909982 9.99999e-007 0.399521 -0.916724 0 0.317836 -0.93375 -0.164595 0.308581 0.808188 -0.501607 0.222931 -0.922789 -0.314264 -0.392554 0.873765 0.287116 -0.170287 -0.935254 0.310326 0.016258 -0.949303 0.313941 0.017115 -0.949881 0.312142 -0.11838 -0.93718 0.328147 0.084975 0.012414 0.996306 0.082302 0.021999 0.996365 0.064557 0.145771 0.98721 0.051729 0.308143 0.949933 -0.433717 0.863198 0.258415 -0.50883 0.798372 0.322016 -0.996838 0.079465 0 -0.676699 0.150715 0.720669 -0.653414 0.157208 0.740497 -0.648759 0.158467 0.744312 -0.680229 0.149701 0.71755 -0.707709 0.013316 -0.706378 -0.746596 0.013816 -0.665134 -0.705813 0.013292 -0.708274 -0.75047 0.013865 -0.66076 -0.803987 0.021204 -0.594268 -0.748258 0.025757 -0.662908 -0.806425 0.020988 -0.590964 -0.739386 0.026423 -0.672763 0.31259 0.009854 -0.949837 0.079537 -0.021177 -0.996607 0.061889 -0.021601 -0.997849 -0.293077 -0.007185 0.956062 -0.036258 0.026742 0.998985 -0.293077 -0.007186 0.956062 -0.057697 0.02125 0.998108 0.273383 -0.943372 0.187911 0.000211 -0.999885 -0.015142 0.270379 -0.941498 0.201191 0.105467 -0.993931 0.031279 -0.111192 0.993332 -0.030477 -0.263374 0.947145 -0.183167 -0.009803 0.999929 0.006704 -0.26032 0.946813 -0.189152 -0.935899 0.073579 0.344499 -0.935899 0.073579 0.344498 -0.179095 -0.043905 -0.982852 -0.180247 -0.040281 -0.982796 0.196891 0.044465 0.979417 0.193318 0.039376 0.980346 -0.152544 -0.985626 0.072602 -0.148763 -0.985251 0.084557 0.189919 0.978458 -0.080931 0.188875 0.976982 -0.099163 -0.409229 -0.715882 0.565725 0.192221 0.826908 0.528465 -0.004248 0.902094 0.431518 -0.455871 -0.888437 -0.053494 0.073292 0.08392 -0.993774 0.448358 0.373838 -0.811924 0.558413 -0.054212 0.82779 -0.127321 -0.879974 0.45764 -0.317966 0.495799 -0.808134 -0.664384 0.726798 -0.174237 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_003-geometry-normal-array" count="113" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_003-geometry-uv">
+                    <float_array id="enm_beetle_brk_003-geometry-uv-array" count="162">0.102764 0.162688 0.180969 0.070639 0.102744 0.070639 0.180948 0.162602 0.080812 0.165541 0.094041 0.070639 0.080812 0.070639 0.094142 0.164441 0.297058 0.250068 0.295867 0.236354 0.293622 0.231697 0.296607 0.240953 0.200433 0.150977 0.190696 0.070639 0.190696 0.15679 0.200433 0.070639 0.102761 0.190619 0.180952 0.190429 0.075561 0.181002 0.071014 0.174859 0.207398 0.174739 0.21587 0.165701 0.097242 0.050745 0.182476 0.054685 0.188115 0.050745 0.102228 0.054685 0.186623 0.062015 0.18239 0.059996 0.105523 0.065967 0.178498 0.066 0.097913 0.062351 0.102636 0.059996 0.298402 0.260807 0.205422 0.249643 0.202604 0.261375 0.198162 0.240736 0.205902 0.241511 0.198152 0.250985 0.207567 0.221579 0.297422 0.22188 0.208937 0.231546 0.299154 0.226669 0.078959 0.18545 0.20013 0.183777 0.207058 0.236272 0.303803 0.240544 0.303508 0.252049 0.202132 0.225652 0.371866 0.062125 0.903803 0.810526 0.903803 0.058964 0.255175 0.813687 0.186118 0.813687 0.274113 0.062125 0.186124 0.062125 0.140867 0.813687 0.048058 0.062125 0.048058 0.813687 0.333333 0.994187 0.666667 0.895195 0.333333 0.895195 0.666667 0.994187 0 0.895195 1 0.994187 1 0.895195 0 0.994187 0.621443 0.330172 0.865208 0.549701 0.865208 0.330172 0.621443 0.549701 0.133913 0.330172 0.377678 0.549701 0.377678 0.330172 0.133913 0.549701 0.865208 0.769229 0.621443 0.769229 0.377678 0.769229 0.133913 0.769229 0.693508 0.431679 0.708794 0.412558 0.678221 0.412558 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_003-geometry-uv-array" count="81" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="enm_beetle_brk_003-geometry-vertex">
+                    <input semantic="POSITION" source="#enm_beetle_brk_003-geometry-position" />
+                </vertices>
+                <triangles material="enm_beetle_body" count="66">
+                    <input semantic="VERTEX" source="#enm_beetle_brk_003-geometry-vertex" offset="0" />
+                    <input semantic="NORMAL" source="#enm_beetle_brk_003-geometry-normal" offset="1" />
+                    <input semantic="TEXCOORD" source="#enm_beetle_brk_003-geometry-uv" offset="2" set="0" />
+                    <p>1 0 1 0 0 0 2 0 2 0 0 0 1 0 1 3 0 3 5 2 5 4 1 4 6 3 6 4 1 4 5 2 5 4 1 4 7 4 7 4 1 4 5 2 5 4 1 4 7 4 7 4 1 4 20 17 18 4 1 4 7 4 7 4 1 4 20 17 18 21 18 19 7 4 7 55 52 42 20 17 18 55 52 42 7 4 7 51 48 0 5 2 5 51 48 0 7 4 7 51 48 0 5 2 5 52 49 2 8 5 8 9 6 9 11 8 11 9 6 9 8 5 8 10 7 10 62 59 33 10 7 10 8 5 8 10 7 10 62 59 33 63 60 40 62 59 33 63 60 40 62 59 33 63 60 40 62 59 33 64 61 44 65 62 36 64 61 44 62 59 33 12 9 12 13 10 13 15 12 15 13 10 13 12 9 12 13 10 13 14 11 14 13 10 13 12 9 12 13 10 13 14 11 14 53 50 1 14 11 14 53 50 1 14 11 14 53 50 1 14 11 14 54 51 3 14 11 14 54 51 3 14 11 14 54 51 3 14 11 14 56 53 43 14 11 14 56 53 43 14 11 14 56 53 43 14 11 14 22 19 20 12 9 12 22 19 20 14 11 14 22 19 20 12 9 12 23 20 21 17 14 16 16 13 3 18 15 17 16 13 3 17 14 16 19 16 0 37 34 33 36 33 32 38 35 34 36 33 32 37 34 33 39 36 8 40 37 35 41 38 33 43 40 37 41 38 33 40 37 35 42 39 36 40 37 35 42 39 36 40 37 35 42 39 36 40 37 35 57 54 44 66 63 47 57 54 44 40 37 35 57 54 44 66 63 47 67 64 40 45 42 10 44 41 38 46 43 39 44 41 38 45 42 10 47 44 40 48 45 41 50 47 9 49 46 10 50 47 9 48 45 41 50 47 9 58 55 45 50 47 9 48 45 41 50 47 9 58 55 45 61 58 11 58 55 45 61 58 11 58 55 45 61 58 11 58 55 45 59 56 8 60 57 46 59 56 8 58 55 45 25 22 23 24 21 22 26 23 24 24 21 22 25 22 23 24 21 22 27 24 25 24 21 22 25 22 23 24 21 22 27 24 25 34 31 30 35 32 31 34 31 30 27 24 25 34 31 30 35 32 31 34 31 30 31 28 28 34 31 30 35 32 31 34 31 30 31 28 28 32 29 2 31 28 28 32 29 2 31 28 28 32 29 2 31 28 28 30 27 1 33 30 29 30 27 1 31 28 28 30 27 1 33 30 29 30 27 1 29 26 27 30 27 1 33 30 29 30 27 1 29 26 27 28 25 26 25 22 23 28 25 26 29 26 27 28 25 26 25 22 23 26 23 24 </p>
+                </triangles>
+                <triangles material="enm_common_pieces" count="42">
+                    <input semantic="VERTEX" source="#enm_beetle_brk_003-geometry-vertex" offset="0" />
+                    <input semantic="NORMAL" source="#enm_beetle_brk_003-geometry-normal" offset="1" />
+                    <input semantic="TEXCOORD" source="#enm_beetle_brk_003-geometry-uv" offset="2" set="0" />
+                    <p>126 112 80 125 112 79 124 112 78 69 65 49 68 65 48 70 65 50 68 65 48 69 65 49 71 65 51 73 67 52 72 66 48 74 68 51 72 66 48 73 67 52 75 69 53 77 71 52 76 70 54 78 72 53 76 70 54 77 71 52 79 73 55 81 75 55 80 74 56 82 76 54 80 74 56 81 75 55 83 77 57 85 79 59 84 78 58 86 78 60 84 78 58 85 79 59 87 80 61 104 95 64 87 80 61 85 79 59 87 80 61 104 95 64 105 96 63 89 82 58 88 81 59 90 83 61 88 81 59 89 82 58 91 84 60 106 97 65 91 84 60 89 82 58 91 84 60 106 97 65 107 98 62 93 86 58 92 85 59 94 87 61 92 85 59 93 86 58 95 88 60 108 99 65 95 88 60 93 86 58 95 88 60 108 99 65 109 100 62 96 89 59 97 90 58 99 92 60 97 90 58 96 89 59 98 91 61 110 101 64 98 91 61 96 89 59 98 91 61 110 101 64 111 102 63 101 94 63 100 93 62 102 94 64 100 93 62 101 94 63 103 93 65 113 104 67 112 103 66 114 105 68 112 103 66 113 104 67 112 103 66 115 106 69 112 103 66 113 104 67 112 103 66 115 106 69 118 108 72 117 107 71 118 108 72 115 106 69 118 108 72 117 107 71 116 105 70 117 107 71 116 105 70 117 107 71 116 105 70 117 107 71 119 104 73 122 111 76 119 104 73 117 107 71 119 104 73 122 111 76 123 109 77 117 107 71 121 110 75 122 111 76 121 110 75 117 107 71 121 110 75 115 106 69 121 110 75 117 107 71 121 110 75 115 106 69 120 109 74 113 104 67 120 109 74 115 106 69 </p>
+                </triangles>
+            </mesh>
+        </geometry>
+    </library_geometries>
+    <library_controllers>
+        <controller id="enm_beetle_brk_003-controller">
+            <skin source="#enm_beetle_brk_003-geometry">
+                <bind_shape_matrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</bind_shape_matrix>
+                <source id="enm_beetle_brk_003-controller-Joints">
+                    <Name_array id="enm_beetle_brk_003-controller-Joints-array" count="1">enm_beetle_brk_003 </Name_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_003-controller-Joints-array" count="1">
+                            <param type="name" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_003-controller-Matrices">
+                    <float_array id="enm_beetle_brk_003-controller-Matrices-array" count="16">1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_003-controller-Matrices-array" count="1" stride="16">
+                            <param type="float4x4" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="enm_beetle_brk_003-controller-Weights">
+                    <float_array id="enm_beetle_brk_003-controller-Weights-array" count="1">1 </float_array>
+                    <technique_common>
+                        <accessor source="#enm_beetle_brk_003-controller-Weights-array" count="1">
+                            <param type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <joints>
+                    <input semantic="JOINT" source="#enm_beetle_brk_003-controller-Joints" />
+                    <input semantic="INV_BIND_MATRIX" source="#enm_beetle_brk_003-controller-Matrices" />
+                </joints>
+                <vertex_weights count="127">
+                    <input semantic="JOINT" offset="0" source="#enm_beetle_brk_003-controller-Joints" />
+                    <input semantic="WEIGHT" offset="1" source="#enm_beetle_brk_003-controller-Weights" />
+                    <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+                    <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+                </vertex_weights>
+            </skin>
+        </controller>
+    </library_controllers>
+    <library_visual_scenes>
+        <visual_scene id="SonicGLvlScene" name="SonicGLvlScene">
+            <node id="enm_beetle_brk_003" sid="enm_beetle_brk_003" name="enm_beetle_brk_003">
+                <instance_controller url="#enm_beetle_brk_003-controller">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="enm_beetle_body" target="#enm_beetle_bodyID" />
+                            <instance_material symbol="enm_common_pieces" target="#enm_common_piecesID" />
+                        </technique_common>
+                    </bind_material>
+                </instance_controller>
+            </node>
+            <node id="enm_beetle_brk_003" sid="enm_beetle_brk_003" name="enm_beetle_brk_003" type="JOINT">
+                <matrix>1 0 0 -0 0 1 0 -0 0 0 1 -0 0 0 0 1 </matrix>
+                <extra>
+                    <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                    </technique>
+                </extra>
+            </node>
+        </visual_scene>
+    </library_visual_scenes>
+    <scene>
+        <instance_visual_scene url="#SonicGLvlScene" />
+    </scene>
+</COLLADA>

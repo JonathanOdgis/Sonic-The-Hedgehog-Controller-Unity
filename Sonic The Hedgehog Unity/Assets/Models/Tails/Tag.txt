@@ -1,0 +1,6 @@
+Game: Sonic Generations
+Subject: Tails
+Copyright: Sega, Sonic Team, etc.
+Model Ripper: Random Talking Bush
+Hosting Permissions: The Models Resource
+Notes: Special thanks to chrrox, Link, Kentilan (Kentalin?) and ItsEasyActually for the model importing script. They deserve most of the credit here.
