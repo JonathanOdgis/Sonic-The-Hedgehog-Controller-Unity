@@ -169,7 +169,7 @@ public class SonicController : MonoBehaviour {
 
 			if (!is_side_scrolling)
 				moveVertical = Input.GetAxis ("Vertical");
-			jump = Input.GetKey (KeyCode.Space);
+			jump = Input.GetKeyDown (KeyCode.Space);
 			free_fall = Input.GetKey (KeyCode.E) && !is_grounded;
 
 			//Spindash Input

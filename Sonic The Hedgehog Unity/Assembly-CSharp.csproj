@@ -135,6 +135,7 @@
      <Compile Include="Assets\Scripts\SonicCam.cs" />
      <Compile Include="Assets\Scripts\SonicCamera.cs" />
      <Compile Include="Assets\Scripts\SonicController.cs" />
+     <Compile Include="Assets\Scripts\SonicTeleporter.cs" />
      <Compile Include="Assets\Scripts\SonicWater.cs" />
      <Compile Include="Assets\Scripts\Spring.cs" />
      <Compile Include="Assets\Scripts\StageManager.cs" />
