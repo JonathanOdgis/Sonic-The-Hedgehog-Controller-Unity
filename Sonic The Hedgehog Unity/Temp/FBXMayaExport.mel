@@ -1,0 +1,155 @@
+while (1)
+{	
+	if (`filetest -r "/Users/jonathanodgis/Sonic-The-Hedgehog-Controller-Unity/Sonic The Hedgehog Unity/Temp/CommandPipe"`)
+	{
+		$exportNormals = 0;
+		$exportTangents = 0;
+		$bakeCommand = "";
+	
+		// Parse settings
+		$waitpipe = `fopen "/Users/jonathanodgis/Sonic-The-Hedgehog-Controller-Unity/Sonic The Hedgehog Unity/Temp/CommandPipe" "r"`;
+		$filename = `fgetline $waitpipe`;
+		$fbxFilename = `fgetline $waitpipe`;
+		
+		for ($i = 0; $i < 3; ++$i) 
+		{
+			$cmd = `fgetline $waitpipe`;
+			
+			if ($cmd == "exportNormals\n")
+				$exportNormals = 1;
+			else if ($cmd == "exportTangents\n")
+				$exportTangents = 1;
+			else if (startsWith($cmd, "bake"))
+				$bakeCommand = $cmd;			
+		}
+		
+		fclose $waitpipe;
+		
+		if (endsWith ($filename, "\n"))
+		{
+			$filename = strip ($filename);
+			$fbxFilename = strip ($fbxFilename);
+			
+			print "Starting maya loading and fbx conversion \n";
+			
+			if ( `file -q -exists $filename` )
+			{				
+				file -force -o $filename;
+				
+				if (`exists FBXResetExport`)
+				{
+					print "Resetting export options to the default values.\n";
+					FBXResetExport(); 
+				}
+				
+				if (getApplicationVersionAsFloat() >= 2013)
+				{
+					print "Setting FBX version to FBX201200.\n";
+					// Ensure we are using a version of FBX that Unity can currently support
+					FBXExportFileVersion FBX201200; 
+				}
+
+				if ($bakeCommand != "")
+				{				
+					if ( `exists FBXExportBakeComplexAnimation` )
+					{						
+						FBXExportBakeComplexAnimation -v true;
+
+						if ($bakeCommand != "bake\n")
+						{
+							// Frame range was specified
+							string $tokens[];
+							$bakeCommand = substring($bakeCommand, 6, size($bakeCommand));
+							$bakeCommand = strip ($bakeCommand);
+							$numTokens = `tokenize $bakeCommand ":" $tokens`;
+							
+							if ( $numTokens == 2 )
+							{
+								int $start = $tokens[ 0 ];
+								int $end = $tokens[ 1 ]; 
+								print( "Exporting frame range " + $start + ":" + $end + "\n" );
+								FBXExportBakeComplexStart -v $start;
+								FBXExportBakeComplexEnd -v $end;
+							} 
+						}
+					}
+					else
+					{
+						$allObjects = stringArrayToString (`ls -dag`, " ");
+						$cmd = "";
+						
+						if ($bakeCommand == "bake\n")
+						{
+							$cmd = ("bakeResults -simulation true -t \"" + `playbackOptions -query -minTime` + ":" + `playbackOptions -query -maxTime` + "\" ");
+						}
+						else
+						{
+							$bakeCommand = substring($bakeCommand, 6, size($bakeCommand));
+							$bakeCommand = strip ($bakeCommand);
+							$cmd = ("bakeResults -simulation true -t \"" + $bakeCommand + "\" ");
+						}
+						
+						$cmd = ($cmd + "-hierarchy below -sampleBy 1 -disableImplicitControl true -preserveOutsideKeys true -sparseAnimCurveBake false -controlPoints false -shape false " + $allObjects);
+						evalEcho($cmd);
+					}					
+				}
+
+				FBXExportEmbeddedTextures -v false;
+				FBXExportHardEdges -v $exportNormals;
+				
+				if (`exists FBXExportTangents`)
+				{
+					FBXExportTangents -v $exportTangents;
+				}
+								
+				FBXExportApplyConstantKeyReducer -v false;
+				// Disable constraints
+				if (`exists FBXExportConstraint`)
+				{
+					FBXExportConstraint -v false;
+				}
+				if (`exists FBXExportConstraints`)
+				{
+					FBXExportConstraints -v false;
+				}
+
+				// Set up all the new export settings to sane values!
+				if (`exists FBXExportUpAxis`)
+				{
+					FBXExportUpAxis Y;
+				}
+				if (`exists FBXExportAxisConversionMethod`)
+				{
+					FBXExportAxisConversionMethod convertAnimation;
+				}
+				if (`exists FBXExportConvertUnitString`) // This command should take precedence over the following
+				{
+					FBXExportConvertUnitString cm;
+				}
+				else if (`exists FBXConvertUnitString`) // This command is deprecated in 2011
+				{
+					FBXConvertUnitString cm;
+				}
+				if (`exists FBXExportScaleFactor`)
+				{
+					FBXExportScaleFactor 1;
+				}				
+
+				FBXExportShowUI -v false;
+
+				print "Before fbx export\n";
+				FBXExport -f $fbxFilename;
+				print "after fbx export\n";
+			}
+			else
+				print "Could not open Maya file.";
+
+			sysFile -delete "/Users/jonathanodgis/Sonic-The-Hedgehog-Controller-Unity/Sonic The Hedgehog Unity/Temp/CommandPipe";
+
+			$donepipe = `fopen "/Users/jonathanodgis/Sonic-The-Hedgehog-Controller-Unity/Sonic The Hedgehog Unity/Temp/SyncPipe" "w"`;
+			fwrite $donepipe "Done";
+			fclose $donepipe;
+			print "Finished maya loading and fbx conversion \n";
+		}
+	}
+}
