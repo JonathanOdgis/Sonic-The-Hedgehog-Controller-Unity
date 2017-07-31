@@ -287,7 +287,7 @@ public class SonicController : MonoBehaviour {
 			}
 		}
 
-		if (free_fall && !is_looping) {
+		if (free_fall && !is_looping && !is_springing && !is_homing_attack) {
 			is_free_falling = true;
 		} else {
 			is_free_falling = false;

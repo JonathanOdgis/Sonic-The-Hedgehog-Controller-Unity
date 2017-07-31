@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{11E138AA-2A45-A2B0-FF1E-79BD3E87F22F}</ProjectGuid>
+    <ProjectGuid>{201622E8-6231-4E7A-AE67-CEA92A14A7E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -263,10 +263,10 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="GETween">
- <HintPath>/Users/jonathanodgis/Documents/My Ring Engine/Assets/GUI Animator/Common/Plugins/GETween.dll</HintPath>
+ <HintPath>/Users/jonathanodgis/Sonic-The-Hedgehog-Controller-Unity/Sonic The Hedgehog Unity/Assets/GUI Animator/Common/Plugins/GETween.dll</HintPath>
  </Reference>
  <Reference Include="GUIAnimatorFREE">
- <HintPath>/Users/jonathanodgis/Documents/My Ring Engine/Assets/GUI Animator/GUI Animator FREE/Plugins/GUIAnimatorFREE.dll</HintPath>
+ <HintPath>/Users/jonathanodgis/Sonic-The-Hedgehog-Controller-Unity/Sonic The Hedgehog Unity/Assets/GUI Animator/GUI Animator FREE/Plugins/GUIAnimatorFREE.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -289,13 +289,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{091CEC44-9549-40B8-D9B8-F17F17831422}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{48E09400-C93F-47CD-2D89-CE3B2176A19C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{68F02810-BB5A-A270-479E-5DBE6FBF13DE}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{26654ED6-DFDB-8683-4DEA-B952E8596C83}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{B2F83FDB-7032-BEF7-ABED-6EBFC875EBB3}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+      <Project>{5C3D8004-8725-CDAF-D839-A4E5DC80E327}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{9C14B55C-358D-7294-DEB5-8948097CB5D5}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
+      <Project>{491D7C2C-BB4B-A1D7-FB49-4A6FA9BB59FC}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

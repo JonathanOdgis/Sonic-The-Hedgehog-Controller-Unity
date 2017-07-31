@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Main Scenes/side_scroll_demo.unity
+- path: Assets/Scenes/Demo Scenes/2d_to_3d_transition_demo.unity
   isLoaded: 1
   isActive: 1
