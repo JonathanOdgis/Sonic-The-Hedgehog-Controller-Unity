@@ -2625,7 +2625,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1495658424074162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1209.8176, y: -547.1456, z: 2563.548}
+  m_LocalPosition: {x: 2941.67, y: -3510, z: 10792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4990430931902436}
@@ -3108,15 +3108,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1480453073055682}
-  m_LocalRotation: {x: 0, y: 0.73206747, z: 0, w: 0.6812322}
-  m_LocalPosition: {x: 1078.29, y: -1552.31, z: 4075.27}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1078.29, y: -1557.53, z: 2455}
   m_LocalScale: {x: 0.07085064, y: 0.071321376, z: 0.07047147}
   m_Children:
   - {fileID: 4693556532757244}
   - {fileID: 4512822228390792}
   m_Father: {fileID: 4359443621637728}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 94.12, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4677669063787398
 Transform:
   m_ObjectHideFlags: 1
@@ -4419,7 +4419,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: GREEN CUBE ZONE ACT 1
+  m_Text: 'SIDE SCROLL TEST ZONE
+
+'
 --- !u!114 &114778562081407930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4502,12 +4504,13 @@ MonoBehaviour:
   sonic_model: {fileID: 1535099202500940}
   collider: {fileID: 135108853366121788}
   rgb: {fileID: 0}
-  max_speed: 60
+  max_speed: 100
   speed: 0
+  acceleration: 0.35
   turn_speed: 200
   side_scroll_turn_speed: 10000
   side_scroll_z: 0
-  max_spin_speed: 80
+  max_spin_speed: 100
   max_drift_speed: 800
   jump_speed: 40
   free_fall_speed: 35

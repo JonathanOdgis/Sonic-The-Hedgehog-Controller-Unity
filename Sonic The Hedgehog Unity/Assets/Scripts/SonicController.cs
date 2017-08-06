@@ -11,12 +11,13 @@ public class SonicController : MonoBehaviour {
 	public GameObject sonic_model;
 	public Collider collider;
 	AudioSource audio;
-	Animator anim;
+	public Animator anim;
 	public Rigidbody rgb;
 
 	//Physics and Movement variables
 	public float max_speed = 20.0f;
 	public float speed = 0.0f;
+	public float acceleration = .5f;
 	float spin_speed = 0.0f;
 	public float turn_speed = 200f;
 	public float side_scroll_turn_speed = 10000f;
@@ -25,6 +26,7 @@ public class SonicController : MonoBehaviour {
 	public float max_drift_speed = 50f;
 	public float jump_speed = 8.0F;
 	public float free_fall_speed = 30f;
+	public float spring_speed = 200;
 	float drift_speed;
 	public float gravity = 20.0F;
 	float peak_angle;
@@ -100,6 +102,7 @@ public class SonicController : MonoBehaviour {
 	public bool is_victory;
 	public bool controls_enabled;
 	public bool is_side_scrolling;
+	bool allow_vertical = true;
 
 	void Start()
 	{
@@ -130,7 +133,7 @@ public class SonicController : MonoBehaviour {
 	void LateUpdate()
 	{
 		anim.SetFloat ("movement", speed);
-		anim.SetBool ("is_jumping", !is_grounded || (!is_grounded && is_looping));
+		anim.SetBool ("is_jumping", !is_grounded && !is_looping);
 		anim.SetBool ("is_spindash", is_spindashing);
 		anim.SetBool ("is_riding", is_riding);
 		anim.SetBool ("is_grinding", is_grinding);
@@ -160,8 +163,14 @@ public class SonicController : MonoBehaviour {
 
 			if (Input.GetAxis ("Vertical") != 0) {
 				vertical_held_down = true;
+				if (!is_side_scrolling)
+					allow_vertical = true;
 			} else {
 				vertical_held_down = false;
+			}
+
+			if (!vertical_held_down && is_side_scrolling && allow_vertical) {
+				allow_vertical = false;
 			}
 	
 
@@ -169,6 +178,9 @@ public class SonicController : MonoBehaviour {
 
 			if (!is_side_scrolling)
 				moveVertical = Input.GetAxis ("Vertical");
+			if (is_side_scrolling && allow_vertical)
+				moveHorizontal = Input.GetAxis ("Vertical");
+
 			jump = Input.GetKeyDown (KeyCode.Space);
 			free_fall = Input.GetKey (KeyCode.E) && !is_grounded;
 
@@ -215,13 +227,15 @@ public class SonicController : MonoBehaviour {
 		RaycastHit hit;
 		var down_ray = new Ray (transform.position, -transform.up); //this.transform.down was Vector3.down
 
-		if (Physics.Raycast (down_ray, out hit, 1.1f)) {
-			
+		float ray_dist = 1.1f;
+		if (is_looping) {
+			ray_dist = 7f;
+		}
+
+		if (Physics.Raycast (down_ray, out hit, ray_dist)) {
 			slope = Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg;
 			Debug.DrawLine (transform.position, hit.point, Color.red);
 		} 
-
-		float rot_x =  this.transform.rotation.x * Mathf.Rad2Deg;
 
 		if (Mathf.Abs (slope) > 0 && speed > 0) { 
 			if (Mathf.Abs (slope) > 40) {
@@ -230,7 +244,6 @@ public class SonicController : MonoBehaviour {
 			} else {
 				rgb.useGravity = true;
 			}
-
 		} else {
 			rgb.useGravity = true;
 			speed_increase = true;
@@ -258,7 +271,8 @@ public class SonicController : MonoBehaviour {
 		} 
 
 		if (!is_grounded) {
-			this.transform.eulerAngles = new Vector3 (0, this.transform.eulerAngles.y);
+			if (!is_looping)
+				this.transform.eulerAngles = new Vector3 (0, this.transform.eulerAngles.y);
 			moving_platform_target = null;
 		}
 
@@ -269,7 +283,7 @@ public class SonicController : MonoBehaviour {
 		//Movement Speed
 		if (Mathf.Abs (speed) < max_speed && (Mathf.Abs (moveHorizontal) > .5f ||
 			Mathf.Abs (moveVertical) > .5f) && speed_increase) {
-			speed += .5f;
+			speed += acceleration;
 		} 
 		else if ((Mathf.Abs (moveHorizontal) == 0 && Mathf.Abs (moveVertical) == 0))
 		{
@@ -293,9 +307,7 @@ public class SonicController : MonoBehaviour {
 			is_free_falling = false;
 
 		}
-
-
-
+			
 		//assuming we only using the single camera:
 		var camera = sonic_cam;
 
@@ -321,7 +333,6 @@ public class SonicController : MonoBehaviour {
 				}
 			} 
 			transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-			//this.transform.eulerAngles = new Vector3 (angle, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
 			sonic_model.transform.eulerAngles = new Vector3 (slope, sonic_model.transform.eulerAngles.y);
 			if(is_grounded)
 				transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -342,17 +353,16 @@ public class SonicController : MonoBehaviour {
 			//Use the editor paths
 			if (currentWayPointID != PathToFollow.path_objs.Count && currentWayPointID >= 0) {
 				float distance = Vector3.Distance (PathToFollow.path_objs [currentWayPointID].position, transform.position);
+				this.transform.position = Vector3.MoveTowards (transform.position, PathToFollow.path_objs [currentWayPointID].position, speed * Time.deltaTime);
+
+				transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+				sonic_model.transform.eulerAngles = new Vector3 (slope, sonic_model.transform.eulerAngles.y);
+
 				if (distance <= reachDistance) {
 					currentWayPointID++;
 					if (currentWayPointID < PathToFollow.path_objs.Count - 1)
 						currentWayPointID++;
 				} 
-				transform.rotation = Quaternion.RotateTowards (this.transform.rotation, Quaternion.LookRotation (desiredMoveDirection), 600000);
-				transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-				sonic_model.transform.eulerAngles = new Vector3 (slope, sonic_model.transform.eulerAngles.y);
-
-				transform.position = Vector3.MoveTowards (transform.position, PathToFollow.path_objs [currentWayPointID].position, speed * Time.deltaTime);
-				//rotation = Quaternion.LookRotation (transform.position - PathToFollow.path_objs [currentWayPointID].position);
 			} else {
 				is_looping = false;
 				currentWayPointID = 0;
@@ -454,14 +464,12 @@ public class SonicController : MonoBehaviour {
 		}
 		
 		if (is_springing ) {
-			//time_left_in_spring_sequence = Vector3.Distance (homing_attack_target.transform.position, this.transform.position) * .01f;
-			//Debug.Log (time_left_in_spring_sequence);
 			time_since_last_spring_collision += .01f;
 			is_homing_attack = false;
 			is_standard_movement = false;
 			rgb.useGravity = false;
-			this.transform.rotation = Quaternion.RotateTowards (this.transform.rotation, Quaternion.LookRotation (spring_target.transform.position, spring_target.transform.position), 60000);
-			this.transform.position = Vector3.MoveTowards (this.transform.position, spring_target.transform.position, 200 * Time.deltaTime);
+			this.transform.rotation = Quaternion.RotateTowards (this.transform.rotation, spring_target.transform.rotation, 60000);
+			this.transform.position = Vector3.MoveTowards (this.transform.position, spring_target.transform.position, spring_speed * Time.deltaTime);
 
 			if ((Vector3.Distance(this.transform.position, spring_target.transform.position) < 5) || (is_grounded && time_since_last_spring_collision > .2f)) { //|| (!is_grounded && time_since_last_spring_collision >= time_left_in_spring_sequence)) {
 				is_springing = false;

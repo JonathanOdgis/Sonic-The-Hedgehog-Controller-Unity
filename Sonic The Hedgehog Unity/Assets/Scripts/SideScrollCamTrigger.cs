@@ -28,6 +28,7 @@ public class SideScrollCamTrigger : MonoBehaviour {
 			SonicCam.Instance.side_scroll_mode = true;
 			SonicController.Instance.side_scroll_z = this.transform.position.z;
 			SonicController.Instance.is_side_scrolling = true;
+			//TODO: When the up stick is held, apply some speed until the up direction is released then ever accept input from it again
 		}
 	}
 
